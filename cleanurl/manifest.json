@@ -1,11 +1,16 @@
 {
   "manifest_version": 3,
   "name": "URL Cleaner",
-  "version": "1.0",
-  "description": "Cleans redirect URLs from dealabs.digidip.net",
+  "version": "1.1",
+  "description": "Removes affiliate redirects from Dealabs links (digidip, metaffiliation, ...)",
   "permissions": [
-    "webNavigation",
+    "webRequest",
     "tabs"
+  ],
+  "host_permissions": [
+    "*://*.digidip.net/*",
+    "*://*.metaffiliation.com/*",
+    "*://*.dealabs.com/*"
   ],
   "background": {
     "service_worker": "background.js"
